@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0B6623 ;
+    font-family: Arial, sans-serif;
+    color:#ee1c29;
+}
+
+.timer-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#Timer { width: 200px; /* Defina uma largura para que o elemento seja um quadrado */
+    height: 100px;
+    text-align: center;
+    background-color: #050c06;
+    color: #01b100;
+    font-size: 50px;
+    margin: 20px 0;
+    margin-left: 25px;
+    border-radius: 10px; /* Define um border-radius fixo para bordas arredondadas */
+    display: flex; /* Use flexbox para centralizar o conteúdo */
+    justify-content: center;
+    align-items: center;
+}
+
+button{   padding: 20px 40px;
+    margin: 0px 15px;
+    border: none;
+    background-color:#ee1c29 ;
+    color: #0B6623;
+    cursor: pointer;
+    border-radius: 5px;}
+
+    button:hover {
+        background-color: #009d46;
+        color:#ee1c29 ;
+    }

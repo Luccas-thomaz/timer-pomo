@@ -7,7 +7,7 @@ const display = document.getElementById('Timer');//pega o timer
 const startButton = document.getElementById('Start');//pega o start button
 const resetButton = document.getElementById('Reset');//pega o Reset button
 const stopButton = document.getElementById('Stop');//pega o stop button
-const audio = document.getElementById('audioElement');//pega o alarme
+const audio = document.getElementById('audioAlarm');//pega o alarme
 const apertar = document.getElementById('audioClick'); //pega o click
 
 
@@ -18,6 +18,7 @@ function updateDisplay() {
 }
 
 function startTimer() {
+    audio.currentTime = 0;
     if (isRunning) return;
 
     isRunning = true;
@@ -25,13 +26,11 @@ function startTimer() {
         if (timeLeft <= 0) {
             clearInterval(timer);
             isRunning = false;
-            audio.play();
             resetTimer;
+            audio.play();
             setTimeout(() => {
-                alert('Tempo esgotado!');
-                timeLeft = 25*60;
-                updateDisplay();
-            }, 100);
+                window.location.href = 'rest.html'; // Redireciona para outra página`;
+            }, 8000);
         
            
         } else {
@@ -51,6 +50,7 @@ function stopTimer(){
     clearInterval(timer);
     isRunning = false;
     audio.pause();
+    audio.currentTime=0;
 }
 
 function playButtonSound() {
